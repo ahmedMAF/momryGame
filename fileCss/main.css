@@ -1,0 +1,95 @@
+
+.strt-play{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    background-color: #673ab7cf;
+}
+.strt-play span{
+    position: relative;
+    display: block;
+    font-size: 30px;
+    color: white;
+    width: fit-content;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background-color: #880e4f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.strt-play .finsh-style{
+    cursor: default;
+    background-color: transparent;
+    color: white;
+    display: none;
+}
+.game{
+    width: 430px;
+    margin: 20px auto;
+}
+.game .nots{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 2px solid #2196f3;
+    padding: 10px;
+    background-color: #f6f6f6;
+}
+.game .content-blocks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.game .content-blocks .block{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition-duration: 0.5s;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 10px;
+    border: 4px solid #2196f3;
+    cursor: pointer;
+}
+.game .content-blocks .block .front{
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+.game .content-blocks .block .front::after{
+    content: '?';
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.game .content-blocks .block .back{
+    width: 100%;
+    height: 100%;
+    background-color: #607d8b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    z-index: 0;
+}
+.front , .back{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.rotaty{
+    transform: rotateY(180deg);
+}
